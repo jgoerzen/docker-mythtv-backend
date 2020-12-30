@@ -1,11 +1,11 @@
-FROM jgoerzen/debian-base-vnc:stretch
+FROM jgoerzen/debian-base-vnc:buster
 MAINTAINER John Goerzen <jgoerzen@complete.org>
 COPY setup/ /tmp/setup/
 RUN /tmp/setup/setup.sh
 # tightvncserver has qt keymap problems.  add tigervnc
 RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     apt-get update && \
-      apt-get -y --no-install-recommends install mythtv-backend=0.28.2-dmo1+deb9u1 xmltv-util \
+      apt-get -y --no-install-recommends install mythtv-backend=30.0+fixes20201003.git622c94965e-dmo1+deb10u1 xmltv-util \
         tigervnc-standalone-server tigervnc-common && \
     apt-get -y -u dist-upgrade && \
     apt-get clean && rm -rf /var/lib/apt/lists/*  /var/tmp/*
