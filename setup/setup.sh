@@ -8,6 +8,8 @@ wget http://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multim
 wget ftp://ftp.osuosl.org/pub/mythtv/3rdParty/jwplayer.zip
 sha256sum -c < sums
 dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
+echo 'deb http://deb.debian.org/debian buster-backports main contrib non-free' >> /etc/apt/sources.list
 echo 'deb http://www.deb-multimedia.org buster main non-free' >> /etc/apt/sources.list
+echo 'deb http://www.deb-multimedia.org buster-backports main non-free' >> /etc/apt/sources.list
 rm deb-multimedia-keyring_2016.8.1_all.deb
 
