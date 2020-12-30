@@ -5,7 +5,7 @@ RUN /tmp/setup/setup.sh
 # tightvncserver has qt keymap problems.  add tigervnc
 RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     apt-get update && \
-      apt-get -y --no-install-recommends install mythtv-backend=30.0+fixes20201003.git622c94965e-dmo1+deb10u1 xmltv-util \
+      apt-get -y --no-install-recommends install mythtv-backend=30.0+fixes20201003.git622c94965e-dmo1+deb10u2 xmltv-util \
         tigervnc-standalone-server tigervnc-common && \
     apt-get -y -u dist-upgrade && \
     apt-get clean && rm -rf /var/lib/apt/lists/*  /var/tmp/*
