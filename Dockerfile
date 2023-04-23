@@ -6,7 +6,7 @@ RUN /tmp/setup/setup.sh
 # REMEMBER TO UPDATE THE GI WHEN UPDATING THE VERSION
 RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     apt-get update && \
-      apt-get -y --no-install-recommends install "mythtv-backend=1:31.0+fixes20220120.git23738a7074-dmo0+deb11u1" xmltv-util mythweb \
+      apt-get -y --no-install-recommends install "mythtv-backend=1:31.0+fixes20220227.git7e4ce1ba98-dmo0+deb11u1" xmltv-util mythweb \
         tigervnc-standalone-server tigervnc-common && \
     apt-get -y -u dist-upgrade && \
     apt-get clean && rm -rf /var/lib/apt/lists/*  /var/tmp/*
